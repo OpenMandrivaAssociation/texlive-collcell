@@ -1,3 +1,9 @@
+# revision 21539
+# category Package
+# catalog-ctan /macros/latex/contrib/collcell
+# catalog-date 2011-02-27 21:54:29 +0100
+# catalog-license lppl1.3
+# catalog-version 0.5
 Name:		texlive-collcell
 Version:	0.5
 Release:	1
@@ -47,6 +53,7 @@ cells.
 %doc %{_texmfdistdir}/source/latex/collcell/README
 %doc %{_texmfdistdir}/source/latex/collcell/collcell.dtx
 %doc %{_texmfdistdir}/source/latex/collcell/collcell.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ cells.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
