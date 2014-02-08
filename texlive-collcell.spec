@@ -6,7 +6,7 @@
 # catalog-version 0.5
 Name:		texlive-collcell
 Version:	0.5
-Release:	2
+Release:	3
 Summary:	Collect contents of a tabular cell as argument to a macro
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collcell
