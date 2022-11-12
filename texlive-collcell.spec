@@ -1,19 +1,13 @@
-# revision 21539
-# category Package
-# catalog-ctan /macros/latex/contrib/collcell
-# catalog-date 2011-02-27 21:54:29 +0100
-# catalog-license lppl1.3
-# catalog-version 0.5
 Name:		texlive-collcell
-Version:	0.5
-Release:	12
+Version:	64967
+Release:	1
 Summary:	Collect contents of a tabular cell as argument to a macro
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collcell
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.r64967.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.doc.r64967.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.source.r64967.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ of a table, but do not support verbatim material inside the
 cells.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,25 +41,11 @@ cells.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5-2
-+ Revision: 750334
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.5-1
-+ Revision: 718092
-- texlive-collcell
-- texlive-collcell
-- texlive-collcell
-- texlive-collcell
-- texlive-collcell
-
