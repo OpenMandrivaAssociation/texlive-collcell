@@ -1,6 +1,6 @@
 Name:		texlive-collcell
 Version:	64967
-Release:	1
+Release:	2
 Summary:	Collect contents of a tabular cell as argument to a macro
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collcell
