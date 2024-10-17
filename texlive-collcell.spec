@@ -3,7 +3,7 @@ Version:	64967
 Release:	2
 Summary:	Collect contents of a tabular cell as argument to a macro
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/collcell
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/collcell
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/collcell.doc.r%{version}.tar.xz
